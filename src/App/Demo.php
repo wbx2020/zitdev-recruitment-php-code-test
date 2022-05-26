@@ -14,9 +14,14 @@ class Demo {
         $this->_req = $req;
     }
     function foo() {
+        echo "1324";
         return "bar";
     }
     function get_user_info() {
+//        return [
+//            "id" => 1,
+//            "username" => "hello world",
+//        ];
         $result = $this->_req->get(self::URL);
         $result_arr = json_decode($result, true);
         if (in_array('error', $result_arr) && $result_arr['error'] == 0) {

@@ -65,4 +65,10 @@ class ProductHandlerTest extends TestCase
 
         $this->assertEquals(143, $totalPrice);
     }
+    public function testGetTotalPriceNew()
+    {
+        $productHandler = new ProductHandler();
+        $totalPrice = $productHandler->getTotalPrice();
+        $this->assertEquals(143, $totalPrice);
+    }
 }

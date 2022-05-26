@@ -2,14 +2,15 @@
 
 namespace App\Service;
 
-class AppLogger
+class Log4php implements LoggerService
 {
 
     private $logger;
-
-    public function __construct(LoggerService $logger)
+    public function __construct()
     {
-        $this->logger = $logger;
+
+        $this->logger = \Logger::getLogger("Log");
+
     }
 
     public function info($message = '')
